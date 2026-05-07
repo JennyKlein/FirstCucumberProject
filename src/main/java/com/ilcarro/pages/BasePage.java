@@ -11,21 +11,25 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class BasePage {
-    public static WebDriver driver;
+public abstract class BasePage {
 
-    public BasePage(WebDriver driver){
+    public static WebDriver driver;
+    public BasePage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(driver, this);
     }
 
-    public void launcherBrowser(){
+    public void launcherBrowser() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+    }
+
+    public void openUrl() {
         driver.get("https://icarro-v1.netlify.app/search?page=0&size=10");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
+
     public void click(WebElement element){
         element.click();
     }
@@ -35,15 +39,16 @@ public class BasePage {
             element.clear();
             element.sendKeys(text);
         }
-
     }
+
     public WebDriverWait getWait(int time) {
         return new WebDriverWait(driver, Duration.ofSeconds(time));
     }
+
     public boolean shouldHaveText(WebElement element,String text,int time){
         return getWait(time).until(ExpectedConditions.textToBePresentInElement(element,text));
-
     }
+
     public boolean isElementVisibleTitle(WebElement element) {
         try {
             element.isDisplayed();
@@ -54,4 +59,7 @@ public class BasePage {
         }
     }
 
+    public void closeBrowser() {
+        driver.quit();
+    }
 }
