@@ -13,6 +13,7 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
+
     @FindBy(css = "input[name='username']")
     WebElement inputEmail;
     @FindBy(css = "input[name='password']")
@@ -29,6 +30,7 @@ public class LoginPage extends BasePage {
         click(yallaButton);
         return this;
     }
+
     @FindBy(css = "h3")
     WebElement messageText;
     public LoginPage verifyMessage(String message) {
@@ -37,7 +39,7 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage enterWrongPassword(DataTable table) {
-        List<Map<String,String>> dataTable = table.asMaps();
+        List<Map<String, String>> dataTable = table.asMaps();
 
         String email = dataTable.get(0).get("email");
         String password = dataTable.get(0).get("password");
@@ -46,4 +48,19 @@ public class LoginPage extends BasePage {
 
         return this;
     }
+
+
+    public LoginPage enterWrongEmail(DataTable table) {
+        List<Map<String, String>> data_Table = table.asMaps();
+
+        String email = data_Table.get(0).get("email");
+        String password = data_Table.get(0).get("password");
+
+        enterData(email,password);
+        return this;
+    }
+
+
+
+
 }
