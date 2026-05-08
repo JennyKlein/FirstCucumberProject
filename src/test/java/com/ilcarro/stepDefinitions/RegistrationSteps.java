@@ -20,7 +20,7 @@ public class RegistrationSteps {
     @And("User enters data")
     public void entersData() {
         registration = new RegistrationPage(driver);
-        registration.enterRegistrationDetails("Olga", "Smith", "myliberty3@ukr.net", "Aa123456!");
+        registration.enterRegistrationDetails("Jenny", "Klein", "jenny.klein@mail.de", "Abc123456!");
     }
 
     @And("Check the box to agree to the terms of use and privacy policy")
