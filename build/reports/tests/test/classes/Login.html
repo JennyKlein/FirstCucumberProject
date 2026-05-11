@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">5</div>
+<div class="counter">9</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">12.200s</div>
+<div class="counter">21.998s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,28 +81,48 @@
 </tr>
 </thead>
 <tr>
+<td class="success">Login with correct email and incorrect password #1</td>
+<td class="success">2.149s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Login with correct email and incorrect password #2</td>
+<td class="success">2.090s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Login with correct email and incorrect password #3</td>
+<td class="success">2.224s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Login with correct email and incorrect password #4</td>
+<td class="success">2.098s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">Login with incorrect email and correct password #1</td>
-<td class="success">2.160s</td>
+<td class="success">2.147s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Login with incorrect email and correct password #2</td>
-<td class="success">2.266s</td>
+<td class="success">2.185s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Login with incorrect email and correct password #3</td>
-<td class="success">2.729s</td>
+<td class="success">2.092s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Login with incorrect email and correct password #4</td>
-<td class="success">2.210s</td>
+<td class="success">2.120s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">Successful login</td>
-<td class="success">2.835s</td>
+<td class="success">4.893s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -120,6 +140,54 @@
   ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser clicks on Yalla button?[39m                 ?[90m# com.ilcarro.stepDefinitions.LoginSteps.user_clicks_on_Yalla_button()?[39m
   ?[32mâœ”?[39m ?[32m?[1mThen ?[22mUser verifies success message in displayed?[39m ?[90m# com.ilcarro.stepDefinitions.LoginSteps.verify_Success_login()?[39m
   ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser closes browser?[39m                         ?[90m# com.ilcarro.stepDefinitions.HomePageSteps.closeBrowser()?[39m
+
+@wrongPassword
+?[1mScenario Outline:?[22m Login with correct email and incorrect password ?[90m# src/test/resources/features/login.feature:32?[39m
+  ?[32mâœ”?[39m ?[32m?[1mGiven ?[22mUser launcher Chrome browser?[39m                            ?[90m# com.ilcarro.stepDefinitions.HomePageSteps.user_launcher_Chrome_browser()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mWhen ?[22mUser opens ilcarro HomePage?[39m                              ?[90m# com.ilcarro.stepDefinitions.HomePageSteps.opens_ilcarro_HomePage()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser clicks on Login link?[39m                                 ?[90m# com.ilcarro.stepDefinitions.LoginSteps.click_On_Login_Link()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser enters correct email and incorrect password?[39m          ?[90m# com.ilcarro.stepDefinitions.LoginSteps.enter_wrong_password(io.cucumber.datatable.DataTable)?[39m
+      | email             | password   |
+      | test222@gmail.com | Test123451 |
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser clicks on Yalla button?[39m                               ?[90m# com.ilcarro.stepDefinitions.LoginSteps.user_clicks_on_Yalla_button()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mThen ?[22mUser verifies error message in displayed?[39m                 ?[90m# com.ilcarro.stepDefinitions.LoginSteps.verifyErrorMessage()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser closes browser?[39m                                       ?[90m# com.ilcarro.stepDefinitions.HomePageSteps.closeBrowser()?[39m
+
+@wrongPassword
+?[1mScenario Outline:?[22m Login with correct email and incorrect password ?[90m# src/test/resources/features/login.feature:33?[39m
+  ?[32mâœ”?[39m ?[32m?[1mGiven ?[22mUser launcher Chrome browser?[39m                            ?[90m# com.ilcarro.stepDefinitions.HomePageSteps.user_launcher_Chrome_browser()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mWhen ?[22mUser opens ilcarro HomePage?[39m                              ?[90m# com.ilcarro.stepDefinitions.HomePageSteps.opens_ilcarro_HomePage()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser clicks on Login link?[39m                                 ?[90m# com.ilcarro.stepDefinitions.LoginSteps.click_On_Login_Link()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser enters correct email and incorrect password?[39m          ?[90m# com.ilcarro.stepDefinitions.LoginSteps.enter_wrong_password(io.cucumber.datatable.DataTable)?[39m
+      | email             | password   |
+      | test222@gmail.com | test12345! |
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser clicks on Yalla button?[39m                               ?[90m# com.ilcarro.stepDefinitions.LoginSteps.user_clicks_on_Yalla_button()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mThen ?[22mUser verifies error message in displayed?[39m                 ?[90m# com.ilcarro.stepDefinitions.LoginSteps.verifyErrorMessage()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser closes browser?[39m                                       ?[90m# com.ilcarro.stepDefinitions.HomePageSteps.closeBrowser()?[39m
+
+@wrongPassword
+?[1mScenario Outline:?[22m Login with correct email and incorrect password ?[90m# src/test/resources/features/login.feature:34?[39m
+  ?[32mâœ”?[39m ?[32m?[1mGiven ?[22mUser launcher Chrome browser?[39m                            ?[90m# com.ilcarro.stepDefinitions.HomePageSteps.user_launcher_Chrome_browser()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mWhen ?[22mUser opens ilcarro HomePage?[39m                              ?[90m# com.ilcarro.stepDefinitions.HomePageSteps.opens_ilcarro_HomePage()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser clicks on Login link?[39m                                 ?[90m# com.ilcarro.stepDefinitions.LoginSteps.click_On_Login_Link()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser enters correct email and incorrect password?[39m          ?[90m# com.ilcarro.stepDefinitions.LoginSteps.enter_wrong_password(io.cucumber.datatable.DataTable)?[39m
+      | email             | password   |
+      | test222@gmail.com | tEST12345! |
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser clicks on Yalla button?[39m                               ?[90m# com.ilcarro.stepDefinitions.LoginSteps.user_clicks_on_Yalla_button()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mThen ?[22mUser verifies error message in displayed?[39m                 ?[90m# com.ilcarro.stepDefinitions.LoginSteps.verifyErrorMessage()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser closes browser?[39m                                       ?[90m# com.ilcarro.stepDefinitions.HomePageSteps.closeBrowser()?[39m
+
+@wrongPassword
+?[1mScenario Outline:?[22m Login with correct email and incorrect password ?[90m# src/test/resources/features/login.feature:35?[39m
+  ?[32mâœ”?[39m ?[32m?[1mGiven ?[22mUser launcher Chrome browser?[39m                            ?[90m# com.ilcarro.stepDefinitions.HomePageSteps.user_launcher_Chrome_browser()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mWhen ?[22mUser opens ilcarro HomePage?[39m                              ?[90m# com.ilcarro.stepDefinitions.HomePageSteps.opens_ilcarro_HomePage()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser clicks on Login link?[39m                                 ?[90m# com.ilcarro.stepDefinitions.LoginSteps.click_On_Login_Link()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser enters correct email and incorrect password?[39m          ?[90m# com.ilcarro.stepDefinitions.LoginSteps.enter_wrong_password(io.cucumber.datatable.DataTable)?[39m
+      | email             | password   |
+      | test222@gmail.com | Ð•ÑƒÑ‹Ðµ12345! |
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser clicks on Yalla button?[39m                               ?[90m# com.ilcarro.stepDefinitions.LoginSteps.user_clicks_on_Yalla_button()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mThen ?[22mUser verifies error message in displayed?[39m                 ?[90m# com.ilcarro.stepDefinitions.LoginSteps.verifyErrorMessage()?[39m
+  ?[32mâœ”?[39m ?[32m?[1mAnd ?[22mUser closes browser?[39m                                       ?[90m# com.ilcarro.stepDefinitions.HomePageSteps.closeBrowser()?[39m
 
 @wrongEmail
 ?[1mScenario Outline:?[22m Login with incorrect email and correct password ?[90m# src/test/resources/features/login.feature:54?[39m
@@ -188,7 +256,7 @@ SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at 11.05.2026, 19:22:03</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at 11.05.2026, 20:52:58</p>
 </div>
 </div>
 </body>
