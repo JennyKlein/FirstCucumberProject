@@ -46,7 +46,7 @@ public class RegistrationPage extends BasePage{
     }
 
     public RegistrationPage userEntersExistingData() {
-        return enterRegistrationDetails("Olga", "Smith", "myliberty3@ukr.net", "Aa123456!");
+        return enterRegistrationDetails("Jenny", "Klein", "jenny.klein@mail.de", "Abc123456!");
     }
 
     @FindBy(css = "h3")

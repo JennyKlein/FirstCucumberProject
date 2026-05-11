@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Login" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-05-08T10:24:01.227Z" hostname="KLEINHAB1" time="19.793">
+<testsuite name="Login" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-05-11T17:21:39" hostname="KLEINHAB1" time="12.2">
   <properties/>
-  <testcase name="Successful login" classname="Login" time="4.245"/>
-  <testcase name="Login with incorrect email and correct password #1" classname="Login" time="3.108"/>
-  <testcase name="Login with incorrect email and correct password #2" classname="Login" time="3.116"/>
-  <testcase name="Login with incorrect email and correct password #3" classname="Login" time="6.363"/>
-  <testcase name="Login with incorrect email and correct password #4" classname="Login" time="2.961"/>
+  <testcase name="Successful login" classname="Login" time="2.835"/>
+  <testcase name="Login with incorrect email and correct password #1" classname="Login" time="2.16"/>
+  <testcase name="Login with incorrect email and correct password #2" classname="Login" time="2.266"/>
+  <testcase name="Login with incorrect email and correct password #3" classname="Login" time="2.729"/>
+  <testcase name="Login with incorrect email and correct password #4" classname="Login" time="2.21"/>
   <system-out><![CDATA[
 @loginPositive
 ?[1mScenario:?[22m Successful login                          ?[90m# src/test/resources/features/login.feature:5?[39m
