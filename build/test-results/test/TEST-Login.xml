@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Login" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-05-11T18:52:25" hostname="KLEINHAB1" time="21.998">
+<testsuite name="Login" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-05-11T19:11:52" hostname="KLEINHAB1" time="21.925">
   <properties/>
-  <testcase name="Successful login" classname="Login" time="4.893"/>
-  <testcase name="Login with correct email and incorrect password #1" classname="Login" time="2.149"/>
-  <testcase name="Login with correct email and incorrect password #2" classname="Login" time="2.09"/>
-  <testcase name="Login with correct email and incorrect password #3" classname="Login" time="2.224"/>
-  <testcase name="Login with correct email and incorrect password #4" classname="Login" time="2.098"/>
-  <testcase name="Login with incorrect email and correct password #1" classname="Login" time="2.147"/>
-  <testcase name="Login with incorrect email and correct password #2" classname="Login" time="2.185"/>
-  <testcase name="Login with incorrect email and correct password #3" classname="Login" time="2.092"/>
-  <testcase name="Login with incorrect email and correct password #4" classname="Login" time="2.12"/>
+  <testcase name="Successful login" classname="Login" time="3.484"/>
+  <testcase name="Login with correct email and incorrect password #1" classname="Login" time="2.096"/>
+  <testcase name="Login with correct email and incorrect password #2" classname="Login" time="2.091"/>
+  <testcase name="Login with correct email and incorrect password #3" classname="Login" time="2.119"/>
+  <testcase name="Login with correct email and incorrect password #4" classname="Login" time="3.038"/>
+  <testcase name="Login with incorrect email and correct password #1" classname="Login" time="2.814"/>
+  <testcase name="Login with incorrect email and correct password #2" classname="Login" time="2.059"/>
+  <testcase name="Login with incorrect email and correct password #3" classname="Login" time="2.145"/>
+  <testcase name="Login with incorrect email and correct password #4" classname="Login" time="2.079"/>
   <system-out><![CDATA[
 @loginPositive
 ?[1mScenario:?[22m Successful login                          ?[90m# src/test/resources/features/login.feature:5?[39m
