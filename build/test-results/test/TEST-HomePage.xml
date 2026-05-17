@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HomePage" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-05-11T19:12:13" hostname="KLEINHAB1" time="0.986">
+<testsuite name="HomePage" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-05-11T19:20:55" hostname="KLEINHAB1" time="0.976">
   <properties/>
-  <testcase name="Verify HomePage title is displayed" classname="HomePage" time="0.986"/>
+  <testcase name="Verify HomePage title is displayed" classname="HomePage" time="0.976"/>
   <system-out><![CDATA[
 @navigate
 ?[1mScenario:?[22m Verify HomePage title is displayed       ?[90m# src/test/resources/features/navigate.feature:5?[39m
